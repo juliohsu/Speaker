@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <title>TextSpeaker</title>
+  <style>
+    #icon {
+      color: white;
+      font-size: 3.5rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container text-center">
+
+    <div class="mt-4 d-flex justify-content-center align-items-center">
+      <i class="fas fa-bullhorn mr-3" id="icon"></i>
+      <h1>Text Speaker</h1>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-8 mx-auto" id="content">
+        <form class="p-5">
+
+          <div class="form-group">
+            <textarea id="textarea" placeholder="Type your words" class="form-control form-control-lg"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="rate">Speed x<span id="rateValue">1</span></label>
+            <input type="range" id="rate" class="custom-range"
+            min="0.5" max="2" step="0.1" value="1">
+          </div>
+
+          <div class="form-group">
+            <label for="pitch">Pitch x<span id="pitchValue">1</span></label>
+            <input type="range" id="pitch" class="custom-range"
+            min="0" max="2" step="0.1" value="1">
+          </div>
+
+          <div class="form-group">
+            <label for="select">Select your language</label>
+            <select id="select" class="form-control"></select>
+          </div>
+
+          <button type="submit" id="display-btn" class="btn btn-primary btn-lg mt-3">Display</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2021 TextSpeaker, autor <a href="https://github.com/juliohsu">Julio Hsu</a>.</p>
+    </footer>
+  
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
